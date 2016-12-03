@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>File Source for views.lib.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+						<h1>Source for file views.lib.php</h1>
+<p>Documentation is available at <a href="../default/_php---libs---views.lib.php.html">views.lib.php</a></p>
+<div class="src-code">
+<div class="src-code"><ol><li><div class="src-line"><a name="a1"></a>﻿<span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line"><a name="a2"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a3"></a><span class="src-doc">&nbsp;*&nbsp;библиотека&nbsp;функций&nbsp;для&nbsp;заполнения&nbsp;опций&nbsp;select&nbsp;в&nbsp;HTML-коде&nbsp;форм</span></div></li>
+<li><div class="src-line"><a name="a4"></a><span class="src-doc">&nbsp;*&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a5"></a><span class="src-doc">&nbsp;*&nbsp;используется&nbsp;в&nbsp;файлах&nbsp;input.php,&nbsp;output.php</span></div></li>
+<li><div class="src-line"><a name="a6"></a><span class="src-doc">&nbsp;*&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a7"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@internal</span><span class="src-doc">&nbsp;отстутствие&nbsp;функции&nbsp;trim()&nbsp;или&nbsp;ее&nbsp;аналогов&nbsp;при&nbsp;обработке&nbsp;данных&nbsp;из&nbsp;текстовых&nbsp;файлов&nbsp;может&nbsp;стать&nbsp;причиной&nbsp;трудноуловимой&nbsp;ошибки&nbsp;при&nbsp;работе&nbsp;с&nbsp;базой&nbsp;данных.</span></div></li>
+<li><div class="src-line"><a name="a8"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@internal</span><span class="src-doc">&nbsp;При&nbsp;кажущемся&nbsp;соответствии&nbsp;с&nbsp;параметром&nbsp;запроса&nbsp;данные&nbsp;не&nbsp;будут&nbsp;совпадать&nbsp;из-за&nbsp;наличия&nbsp;неотображаемых&nbsp;символов&nbsp;вроде&nbsp;\n,&nbsp;присутствующих&nbsp;в&nbsp;файлах&nbsp;*.txt</span></div></li>
+<li><div class="src-line"><a name="a9"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@author</span><span class="src-doc">&nbsp;Евгений&nbsp;Свириденко&nbsp;&lt;partagas@mail.ru&gt;</span></div></li>
+<li><div class="src-line"><a name="a10"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@version</span><span class="src-doc">&nbsp;Persona&nbsp;1.0&nbsp;дата&nbsp;релиза&nbsp;18.11.2014</span></div></li>
+<li><div class="src-line"><a name="a11"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@copyright</span><span class="src-doc">&nbsp;Е.Свириденко&nbsp;2014</span></div></li>
+<li><div class="src-line"><a name="a12"></a><span class="src-doc">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a13"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a14"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">&quot;PATH_SELECT&quot;</span><span class="src-sym">,&nbsp;</span><span class="src-str">&quot;../../txt/&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a15"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a16"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a17"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;функция&nbsp;fill_select($txt_file)</span></div></li>
+<li><div class="src-line"><a name="a18"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a19"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;используется&nbsp;для&nbsp;заполнения&nbsp;опций&nbsp;select&nbsp;в&nbsp;коде&nbsp;форм,</span></div></li>
+<li><div class="src-line"><a name="a20"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;например,&nbsp;пунктов&nbsp;пропуска&nbsp;или&nbsp;стран</span></div></li>
+<li><div class="src-line"><a name="a21"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;путем&nbsp;извлечения&nbsp;строк&nbsp;из&nbsp;соответствующих&nbsp;файлов&nbsp;в&nbsp;папке&nbsp;txt</span></div></li>
+<li><div class="src-line"><a name="a22"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a23"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc-var">$txt_file&nbsp;</span><span class="src-doc">строка&nbsp;с&nbsp;именем&nbsp;файла</span></div></li>
+<li><div class="src-line"><a name="a24"></a><span class="src-doc">*/</span></div></li>
+<li><div class="src-line"><a name="a25"></a><span class="src-key">function&nbsp;</span><a href="../default/_php---libs---views.lib.php.html#functionfill_select">fill_select</a><span class="src-sym">(</span><span class="src-var">$txt_file</span><span class="src-sym">)</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a26"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if</span><span class="src-sym">(</span><a href="http://www.php.net/file_exists">file_exists</a><span class="src-sym">(</span><span class="src-id"><a href="../default/_php---libs---views.lib.php.html#definePATH_SELECT">PATH_SELECT</a></span>.<span class="src-var">$txt_file</span><span class="src-sym">))</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a27"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$file_array&nbsp;</span>=&nbsp;<a href="http://www.php.net/file">file</a><span class="src-sym">(</span><span class="src-id"><a href="../default/_php---libs---views.lib.php.html#definePATH_SELECT">PATH_SELECT</a></span>.<span class="src-var">$txt_file</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a28"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">foreach&nbsp;</span><span class="src-sym">(</span><span class="src-var">$file_array&nbsp;</span><span class="src-key">as&nbsp;</span><span class="src-var">$option</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a29"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$option&nbsp;</span>=&nbsp;<a href="http://www.php.net/rtrim">rtrim</a><span class="src-sym">(</span><span class="src-var">$option</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a30"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-str">&quot;</span><span class="src-str">&lt;option&nbsp;value='<span class="src-var">$option</span>'&gt;<span class="src-var">$option</span>&lt;/option&gt;</span><span class="src-str">&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a31"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a32"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span><span class="src-key">else</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a33"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$error_select&nbsp;</span>=&nbsp;<span class="src-str">&quot;Нет&nbsp;необходимых&nbsp;данных&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a34"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-str">&quot;</span><span class="src-str">&lt;option&nbsp;value='no_value'&gt;<span class="src-var">$error_select</span>&lt;/option&gt;</span><span class="src-str">&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a35"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a36"></a><span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a37"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a38"></a><span class="src-php">?&gt;</span></div></li>
+</ol></div>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Mon, 10 Nov 2014 19:56:57 +0400 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.4</a>
+	</p>
+	</body>
+</html>

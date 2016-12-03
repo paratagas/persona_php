@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs for page admin.lib.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="file-name">/php/libs/admin.lib.php</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+									<a href="#sec-includes">Includes</a>
+			|											<a href="#sec-functions">Functions</a>
+			</div>
+	<div class="info-box-body">	
+		<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">filesource:</span> <a href="../__filesource/fsource_default__phplibsadmin.lib.php.html">Source Code for this file</a></li>
+			</ul>
+		
+			</div>
+</div>
+		
+
+	<a name="sec-includes"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Includes</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Includes</span>
+			|													<a href="#sec-functions">Functions</a>
+					</div>
+		<div class="info-box-body">	
+			<a name="_sanitize_lib_php"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="include-title">
+			<span class="include-type">require_once</span>
+			(<span class="include-name"><a href="../default/_php---libs---sanitize.lib.php.html">"sanitize.lib.php"</a></span>)
+			(line <span class="line-number"><a href="../__filesource/fsource_default__phplibsadmin.lib.php.html#a12">12</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">библиотека функций для страницы admin.php</p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Евгений Свириденко &lt;<a href="mailto:partagas@mail.ru">partagas@mail.ru</a>&gt;</li>
+				<li><span class="field">version:</span> Persona 1.0 дата релиза 18.11.2014</li>
+				<li><span class="field">copyright:</span> Е.Свириденко 2014</li>
+			</ul>
+	
+</div>
+		</div>
+	</div>
+	
+	
+	
+	<a name="sec-functions"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Functions</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-includes">Includes</a>
+				|												<span class="disabled">Functions</span>
+		</div>
+		<div class="info-box-body">	
+			<a name="functionadd_user" id="functionadd_user"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">add_user</span> (line <span class="line-number"><a href="../__filesource/fsource_default__phplibsadmin.lib.php.html#a50">50</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">функция add_user($new_login, $new_pass)</p>
+<p class="description"><p>используется для добавления нового пользователя в таблицу users  вызывается в admin_action.php</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> индикатор успешности операции</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			add_user
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$new_login</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$new_pass</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$new_login</span><span class="var-description">: логин пользователя</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$new_pass</span><span class="var-description">: пароль пользователя</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionchange_pass" id="functionchange_pass"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">change_pass</span> (line <span class="line-number"><a href="../__filesource/fsource_default__phplibsadmin.lib.php.html#a81">81</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">функция change_pass($change_login, $pass_old, $pass_new)</p>
+<p class="description"><p>используется для смены пароля пользователя в таблице users  вызывается в admin_action.php</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> индикатор успешности операции</li>
+				<li><span class="field">uses:</span> <a href="../default/_php---libs---sanitize.lib.php.html#functionsecure_pass">secure_pass()</a> - sanitize.lib.php</li>
+				<li><span class="field">uses:</span> <a href="../default/_php---libs---sanitize.lib.php.html#functionsanitize_pass">sanitize_pass()</a> - sanitize.lib.php</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			change_pass
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$change_login</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$pass_old</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$pass_new</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$change_login</span><span class="var-description">: логин пользователя</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$pass_old</span><span class="var-description">: старый пароль пользователя</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$pass_new</span><span class="var-description">: новый пароль пользователя</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functioncheck_admin" id="functioncheck_admin"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">check_admin</span> (line <span class="line-number"><a href="../__filesource/fsource_default__phplibsadmin.lib.php.html#a161">161</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">функция check_admin($pass_admin)</p>
+<p class="description"><p>используется для проверки пароля админа  вызывается в admin_action.php</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> индикатор успешности операции</li>
+				<li><span class="field">uses:</span> <a href="../default/_php---libs---sanitize.lib.php.html#functionsanitize_pass">sanitize_pass()</a> - sanitize.lib.php</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			check_admin
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$pass_admin</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$pass_admin</span><span class="var-description">: пароль админа</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functioncheck_login" id="functioncheck_login"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">check_login</span> (line <span class="line-number"><a href="../__filesource/fsource_default__phplibsadmin.lib.php.html#a187">187</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">функция check_login($new_login)</p>
+<p class="description"><p>используется для проверки существования вводимого логина  вызывается в admin_action.php с функцией add_user()</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> индикатор успешности операции</li>
+				<li><span class="field">uses:</span> <a href="../default/_php---libs---sanitize.lib.php.html#functionsanitize_pass">sanitize_pass()</a> - sanitize.lib.php</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			check_login
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$new_login</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$new_login</span><span class="var-description">: новый логин</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functiondel_user" id="functiondel_user"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">del_user</span> (line <span class="line-number"><a href="../__filesource/fsource_default__phplibsadmin.lib.php.html#a131">131</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">функция del_user($del_user_select)</p>
+<p class="description"><p>используется для удаления пользователя из таблицы users  вызывается в admin_action.php</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> индикатор успешности операции</li>
+				<li><span class="field">uses:</span> <a href="../default/_php---libs---sanitize.lib.php.html#functionsanitize_pass">sanitize_pass()</a> - sanitize.lib.php</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			del_user
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$del_user_select</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$del_user_select</span><span class="var-description">: логин пользователя</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionfill_users" id="functionfill_users"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">fill_users</span> (line <span class="line-number"><a href="../__filesource/fsource_default__phplibsadmin.lib.php.html#a20">20</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">функция fill_users()</p>
+<p class="description"><p>используется для заполнения опций select пользователями из таблицы users  вызывается в admin.php</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			fill_users
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionshow_logs" id="functionshow_logs"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">show_logs</span> (line <span class="line-number"><a href="../__filesource/fsource_default__phplibsadmin.lib.php.html#a255">255</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">функция function show_logs()</p>
+<p class="description"><p>используется для получения из БД логов из таблицы logs  вызывается в admin_action.php</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			show_logs
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionshow_result" id="functionshow_result"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">show_result</span> (line <span class="line-number"><a href="../__filesource/fsource_default__phplibsadmin.lib.php.html#a209">209</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">функция show_result($result)</p>
+<p class="description"><p>используется для возврата на страницу admin.php и уведомления об успешности операции  вызывается в admin_action.php</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			show_result
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$result</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$result</span><span class="var-description">: сообщение для пользователя</span>			</li>
+				</ul>
+		
+	
+</div>
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Mon, 10 Nov 2014 19:56:53 +0400 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.4</a>
+	</p>
+	</div></body>
+</html>

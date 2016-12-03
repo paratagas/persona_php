@@ -1,0 +1,269 @@
+            <table border="0" cellspacing="10" cellpadding="0">
+                <tr class="group_name">
+                  <td></td>
+                </tr>
+                <tr class="group_name">
+                  <td>Персона № 1:</td>
+                </tr>
+                
+                <tr>
+                <td>Имя (рус.):</td>
+                <td align="left">
+                    Коля
+                </td>
+                </tr>
+                
+                <tr>
+                <td>Фамилия (рус.):</td>
+                <td align="left">
+                    Залупкин
+                </td>
+                </tr>
+                
+                <tr>
+                <td>Имя (лат.):</td>
+                <td align="left">
+                    Kolya
+                </td>
+                </tr>
+                
+                <tr>
+                <td>Фамилия (лат):</td>
+                <td align="left">
+                    Zalupkin
+                </td>
+                </tr>
+                
+                <tr>
+                <td>Дата рождения:</td>
+                <td align="left">
+                    10.10.1991
+                </td>
+                </tr>
+                
+                <tr>
+                <td>Гражданство:</td>
+                <td align="left">
+                    Афганистан
+                </td>
+                </tr>
+                
+                <tr>
+                <td>Номер паспорта:</td>
+                <td align="left">
+                    245
+                </td>
+                </tr>
+                
+                <tr>
+                <td>Личный номер:</td>
+                <td align="left">
+                    246
+                </td>
+                </tr>
+                
+                <tr>
+                <td>Номер автомобиля:</td>
+                <td align="left">
+                    8899io
+                </td>
+                </tr>
+                
+                <tr>
+                <td>Дата задержания:</td>
+                <td align="left">
+                    19.09.2014
+                </td>
+                </tr>
+                
+                <tr>
+                <td>Сопредельное государство:</td>
+                <td align="left">
+                    Латвия
+                </td>
+                </tr>
+                
+                <tr>
+                <td>Направление:</td>
+                <td align="left">
+                    Выезд
+                </td>
+                </tr>
+                
+                <tr>
+                <td>Пункт пропуска:</td>
+                <td align="left">
+                    Бигосово на ж.д. станции Бигосово (ппр)
+                </td>
+                </tr>
+                
+                <tr>
+                <td>Задержан сотрудниками:</td>
+                <td align="left">
+                    Таможня
+                </td>
+                </tr>
+                
+                <tr>
+                <td>Предмет АТП:</td>
+                <td align="left">
+                    сигареты и табак
+                </td>
+                </tr>
+                
+                <tr>
+                <td>В количестве:</td>
+                <td align="left">
+                    2340 пачек
+                </td>
+                </tr>
+                
+                <tr>
+                <td>Стоимостью:</td>
+                <td align="left">
+                    3450 евро
+                </td>
+                </tr>
+                
+                <tr>
+                <td>Обстоятельства задержания:</td>
+                <td align="left">
+                    Описание Залупкина. Сигареты, евро, автомобиль, задержан.
+                </td>
+                </tr>
+                
+            </table>            <table border="0" cellspacing="10" cellpadding="0">
+                <tr class="group_name">
+                  <td></td>
+                </tr>
+                <tr class="group_name">
+                  <td>Персона № 2:</td>
+                </tr>
+                
+                <tr>
+                <td>Имя (рус.):</td>
+                <td align="left">
+                    Василий
+                </td>
+                </tr>
+                
+                <tr>
+                <td>Фамилия (рус.):</td>
+                <td align="left">
+                    Пупкин
+                </td>
+                </tr>
+                
+                <tr>
+                <td>Имя (лат.):</td>
+                <td align="left">
+                    Vasya
+                </td>
+                </tr>
+                
+                <tr>
+                <td>Фамилия (лат):</td>
+                <td align="left">
+                    Pupkin
+                </td>
+                </tr>
+                
+                <tr>
+                <td>Дата рождения:</td>
+                <td align="left">
+                    07.10.1995
+                </td>
+                </tr>
+                
+                <tr>
+                <td>Гражданство:</td>
+                <td align="left">
+                    Бангладеш
+                </td>
+                </tr>
+                
+                <tr>
+                <td>Номер паспорта:</td>
+                <td align="left">
+                    12
+                </td>
+                </tr>
+                
+                <tr>
+                <td>Личный номер:</td>
+                <td align="left">
+                    88888888
+                </td>
+                </tr>
+                
+                <tr>
+                <td>Номер автомобиля:</td>
+                <td align="left">
+                    56tt
+                </td>
+                </tr>
+                
+                <tr>
+                <td>Дата задержания:</td>
+                <td align="left">
+                    08.10.2014
+                </td>
+                </tr>
+                
+                <tr>
+                <td>Сопредельное государство:</td>
+                <td align="left">
+                    Латвия
+                </td>
+                </tr>
+                
+                <tr>
+                <td>Направление:</td>
+                <td align="left">
+                    Выезд
+                </td>
+                </tr>
+                
+                <tr>
+                <td>Пункт пропуска:</td>
+                <td align="left">
+                    Урбаны (ппр)
+                </td>
+                </tr>
+                
+                <tr>
+                <td>Задержан сотрудниками:</td>
+                <td align="left">
+                    ГПО
+                </td>
+                </tr>
+                
+                <tr>
+                <td>Предмет АТП:</td>
+                <td align="left">
+                    сигареты и табак
+                </td>
+                </tr>
+                
+                <tr>
+                <td>В количестве:</td>
+                <td align="left">
+                    23560 пачек
+                </td>
+                </tr>
+                
+                <tr>
+                <td>Стоимостью:</td>
+                <td align="left">
+                    28000 долларов США
+                </td>
+                </tr>
+                
+                <tr>
+                <td>Обстоятельства задержания:</td>
+                <td align="left">
+                    Описание Пупкина. Сигареты, пачек, долларов США, автомобиль. Обновленное описание Пупкина - добавлено.
+                </td>
+                </tr>
+                
+            </table>

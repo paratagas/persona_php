@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>File Source for db_conn.lib.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+						<h1>Source for file db_conn.lib.php</h1>
+<p>Documentation is available at <a href="../default/_php---libs---db_conn.lib.php.html">db_conn.lib.php</a></p>
+<div class="src-code">
+<div class="src-code"><ol><li><div class="src-line"><a name="a1"></a>﻿<span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line"><a name="a2"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a3"></a><span class="src-doc">&nbsp;*&nbsp;библиотека&nbsp;функций&nbsp;для&nbsp;соединения&nbsp;с&nbsp;БД</span></div></li>
+<li><div class="src-line"><a name="a4"></a><span class="src-doc">&nbsp;*&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a5"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@author</span><span class="src-doc">&nbsp;Евгений&nbsp;Свириденко&nbsp;&lt;partagas@mail.ru&gt;</span></div></li>
+<li><div class="src-line"><a name="a6"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@version</span><span class="src-doc">&nbsp;Persona&nbsp;1.0&nbsp;дата&nbsp;релиза&nbsp;18.11.2014</span></div></li>
+<li><div class="src-line"><a name="a7"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@copyright</span><span class="src-doc">&nbsp;Е.Свириденко&nbsp;2014</span></div></li>
+<li><div class="src-line"><a name="a8"></a><span class="src-doc">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a9"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a10"></a><a href="http://www.php.net/header">header</a><span class="src-sym">(</span><span class="src-str">&quot;Content-Type:&nbsp;text/html;&nbsp;charset=utf-8&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a11"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a12"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">&quot;HOST&quot;</span><span class="src-sym">,&nbsp;</span><span class="src-str">&quot;localhost&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a13"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">&quot;USER&quot;</span><span class="src-sym">,&nbsp;</span><span class="src-str">&quot;root&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a14"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">&quot;PASS&quot;</span><span class="src-sym">,&nbsp;</span><span class="src-str">&quot;55555&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a15"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">&quot;DB_NAME&quot;</span><span class="src-sym">,&nbsp;</span><span class="src-str">&quot;persona_php&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a16"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a17"></a><span class="src-var">$db_conn&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id">mysqli</span><span class="src-sym">(</span><span class="src-id"><a href="../default/_php---libs---db_conn.lib.php.html#defineHOST">HOST</a></span><span class="src-sym">,&nbsp;</span><span class="src-id"><a href="../default/_php---libs---db_conn.lib.php.html#defineUSER">USER</a></span><span class="src-sym">,&nbsp;</span><span class="src-id"><a href="../default/_php---libs---db_conn.lib.php.html#definePASS">PASS</a></span><span class="src-sym">,&nbsp;</span><span class="src-id"><a href="../default/_php---libs---db_conn.lib.php.html#defineDB_NAME">DB_NAME</a></span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a18"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a19"></a><span class="src-key">if&nbsp;</span><span class="src-sym">(</span><a href="http://www.php.net/mysqli_connect_errno">mysqli_connect_errno</a><span class="src-sym">(</span><span class="src-sym">))&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a20"></a>&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-str">&quot;&lt;div&nbsp;id='CONTENT'&gt;&lt;div&nbsp;id='TEXT'&gt;ОШИБКА&nbsp;СОЕДИНЕНИЯ&nbsp;С&nbsp;БАЗОЙ&nbsp;ДАННЫХ&lt;/div&gt;&lt;/div&gt;&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a21"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">exit</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a22"></a><span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a23"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a24"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a25"></a><span class="src-comm">//изменение&nbsp;набора&nbsp;символов&nbsp;на&nbsp;utf8&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a26"></a><span class="src-var">$db_conn</span><span class="src-sym">-&gt;</span><span class="src-id">set_charset</span><span class="src-sym">(</span><span class="src-str">&quot;utf8&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a27"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a28"></a><span class="src-php">?&gt;</span></div></li>
+</ol></div>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Mon, 10 Nov 2014 19:56:54 +0400 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.4</a>
+	</p>
+	</body>
+</html>
